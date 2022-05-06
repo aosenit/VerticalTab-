@@ -1,0 +1,73 @@
+:root {
+  --fontColor: #000;
+  --bodyColor: rgb(199, 155, 197);
+  --cardColor: #fff;
+  --cardHoverColor: rgb(117, 4, 108);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bodyColor);
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+li {
+  list-style: none;
+  font-size: 0.8rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: 0.5s linear;
+  margin-top: 0.5rem;
+}
+
+li:hover,
+.active {
+  background-color: var(--cardHoverColor);
+  color: var(--cardColor);
+  border-radius: 0.2rem;
+}
+
+.container {
+  background-color: var(--cardColor);
+  width: 80%;
+  aspect-ratio: 1/0.6;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1), 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 0.3fr 0.7fr;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  /* height: 95%; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s linear;
+}
+
+h6 {
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+}
+p {
+  font-size: 0.6rem;
+  text-align: left;
+}
