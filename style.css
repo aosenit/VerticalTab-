@@ -41,6 +41,7 @@ li:hover,
 .container {
   background-color: var(--cardColor);
   width: 80%;
+  max-width: 500px;
   aspect-ratio: 1/0.6;
   border-radius: 0.2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1), 0 0.5rem 1rem rgba(0, 0, 0, 0.1);

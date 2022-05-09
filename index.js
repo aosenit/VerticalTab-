@@ -51,20 +51,31 @@ function handleListClick(e) {
 
   //add active classList
   this.classList.add("active");
-  if (this.textContent === "Home") {
-    content.innerHTML = contentDetails[0].content;
-    title.innerHTML = contentDetails[0].title;
-  } else if (this.textContent === "Blog") {
-    content.innerHTML = contentDetails[1].content;
-    title.innerHTML = contentDetails[1].title;
-  } else if (this.textContent === "Help") {
-    content.innerHTML = contentDetails[2].content;
-    title.innerHTML = contentDetails[2].title;
-  } else if (this.textContent === "Code") {
-    content.innerHTML = contentDetails[3].content;
-    title.innerHTML = contentDetails[3].title;
-  } else if (this.textContent === "About") {
-    content.innerHTML = contentDetails[4].content;
-    title.innerHTML = contentDetails[4].title;
-  }
+
+  // Intermediate approach
+  contentDetails.forEach((contentDetail) => {
+    if (contentDetail.title === this.innerText) {
+      title.innerText = contentDetail.title;
+      content.innerText = contentDetail.content;
+    }
+  });
+
+  // beginners friendly approach
+
+  // if (this.textContent === "Home") {
+  //   content.innerHTML = contentDetails[0].content;
+  //   title.innerHTML = contentDetails[0].title;
+  // } else if (this.textContent === "Blog") {
+  //   content.innerHTML = contentDetails[1].content;
+  //   title.innerHTML = contentDetails[1].title;
+  // } else if (this.textContent === "Help") {
+  //   content.innerHTML = contentDetails[2].content;
+  //   title.innerHTML = contentDetails[2].title;
+  // } else if (this.textContent === "Code") {
+  //   content.innerHTML = contentDetails[3].content;
+  //   title.innerHTML = contentDetails[3].title;
+  // } else if (this.textContent === "About") {
+  //   content.innerHTML = contentDetails[4].content;
+  //   title.innerHTML = contentDetails[4].title;
+  // }
 }
